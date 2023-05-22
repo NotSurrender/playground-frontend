@@ -1,32 +1,28 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-  </div>
+  <main class="main">
+    <h1 class="header">B-rain tech</h1>
+    <router-view class="component"></router-view>
+  </main>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "App",
+});
+</script>
+
+<style scoped>
+.main {
+  margin: 0 auto;
+  max-width: 720px;
+}
+.header {
   text-align: center;
-  color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.component {
+  width: 600px;
 }
 </style>
